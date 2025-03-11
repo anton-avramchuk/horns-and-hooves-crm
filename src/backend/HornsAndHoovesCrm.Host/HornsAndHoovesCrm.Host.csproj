@@ -18,6 +18,8 @@
     </PropertyGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\HornsAndHoovesCrm.AspNetCore\HornsAndHoovesCrm.AspNetCore.csproj" />
+      <ProjectReference Include="..\HornsAndHoovesCrm.Core\HornsAndHoovesCrm.Core.csproj" />
       <ProjectReference Include="..\HornsAndHoovesCrm.Modules.OpenApi\HornsAndHoovesCrm.Modules.OpenApi.csproj" />
       <ProjectReference Include="..\HornsAndHoovesCrm.Modules.Scalar\HornsAndHoovesCrm.Modules.Scalar.csproj" />
     </ItemGroup>
