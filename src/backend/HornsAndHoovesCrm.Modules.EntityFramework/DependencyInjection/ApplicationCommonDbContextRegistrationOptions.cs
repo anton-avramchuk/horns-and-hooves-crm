@@ -1,3 +1,4 @@
+using HornsAndHoovesCrm.Core.Exceptions;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace HornsAndHoovesCrm.Modules.EntityFramework.DependencyInjection;

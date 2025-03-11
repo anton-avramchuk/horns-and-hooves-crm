@@ -1,3 +1,5 @@
+using HornsAndHoovesCrm.Core.Exceptions;
+
 namespace HornsAndHoovesCrm.Core;
 
 /// <summary>

@@ -1,3 +1,6 @@
+using System.Reflection;
+using HornsAndHoovesCrm.Modules.EntityFramework.Attributes;
+using HornsAndHoovesCrm.Modules.EntityFramework.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;

@@ -1,3 +1,5 @@
+using HornsAndHoovesCrm.Core.Extensions.Collections;
+
 namespace HornsAndHoovesCrm.Core.Logging;
 
 public class DefaultInitLoggerFactory : IInitLoggerFactory

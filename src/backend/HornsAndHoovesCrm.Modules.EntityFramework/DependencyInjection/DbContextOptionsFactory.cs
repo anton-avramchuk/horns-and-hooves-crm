@@ -1,4 +1,10 @@
+using HornsAndHoovesCrm.Core.DataAccess;
+using HornsAndHoovesCrm.Core.DataAccess.Abstractions;
+using HornsAndHoovesCrm.Core.Exceptions;
+using HornsAndHoovesCrm.Core.Extensions.Collections;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Options;
 
 namespace HornsAndHoovesCrm.Modules.EntityFramework.DependencyInjection;
 

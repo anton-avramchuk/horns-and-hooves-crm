@@ -1,6 +1,8 @@
 namespace HornsAndHoovesCrm.Core.Exceptions;
 
-public class CrmException
+public class CrmException: Exception
 {
-    
+    public CrmException(string message) : base(message) { }
+
+    public CrmException(string message, Exception innerException) : base(message, innerException) { }
 }

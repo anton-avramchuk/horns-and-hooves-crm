@@ -1,4 +1,5 @@
 using System.Data.Common;
+using HornsAndHoovesCrm.Core;
 
 namespace HornsAndHoovesCrm.Modules.EntityFramework;
 

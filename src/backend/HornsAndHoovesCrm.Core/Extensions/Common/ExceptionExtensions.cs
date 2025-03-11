@@ -1,4 +1,6 @@
 using System.Runtime.ExceptionServices;
+using HornsAndHoovesCrm.Core.Logging;
+using Microsoft.Extensions.Logging;
 
 namespace HornsAndHoovesCrm.Core.Extensions.Common;
 

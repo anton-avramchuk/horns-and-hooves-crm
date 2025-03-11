@@ -1,6 +1,6 @@
-namespace HornsAndHoovesCrm.Core.DataAccess.Abstractions;
+namespace HornsAndHoovesCrm.Core.DataAccess;
 
-public class CrmConnectionStringCheckResult
+public record CrmConnectionStringCheckResult
 {
     public bool Connected { get; set; }
 

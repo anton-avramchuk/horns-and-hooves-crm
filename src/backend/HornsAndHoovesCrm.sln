@@ -32,6 +32,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HornsAndHoovesCrm.Modules.E
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HornsAndHoovesCrm.Modules.EntityFramework.SqLite", "HornsAndHoovesCrm.Modules.EntityFramework.SqLite\HornsAndHoovesCrm.Modules.EntityFramework.SqLite.csproj", "{C69CC29A-3DD2-4FC8-93F7-5441A8D4FFD8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HornsAndHoovesCrm.Core", "HornsAndHoovesCrm.Core\HornsAndHoovesCrm.Core.csproj", "{558A4457-2CCC-4EA3-AC88-FF8CFF4C80CA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HornsAndHoovesCrm.Core.DataAccess", "HornsAndHoovesCrm.Core.DataAccess\HornsAndHoovesCrm.Core.DataAccess.csproj", "{C9C2DBDD-D0A3-4343-AC80-A8F9909710B3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -102,5 +106,13 @@ Global
 		{C69CC29A-3DD2-4FC8-93F7-5441A8D4FFD8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C69CC29A-3DD2-4FC8-93F7-5441A8D4FFD8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C69CC29A-3DD2-4FC8-93F7-5441A8D4FFD8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{558A4457-2CCC-4EA3-AC88-FF8CFF4C80CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{558A4457-2CCC-4EA3-AC88-FF8CFF4C80CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{558A4457-2CCC-4EA3-AC88-FF8CFF4C80CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{558A4457-2CCC-4EA3-AC88-FF8CFF4C80CA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C9C2DBDD-D0A3-4343-AC80-A8F9909710B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9C2DBDD-D0A3-4343-AC80-A8F9909710B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9C2DBDD-D0A3-4343-AC80-A8F9909710B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9C2DBDD-D0A3-4343-AC80-A8F9909710B3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
