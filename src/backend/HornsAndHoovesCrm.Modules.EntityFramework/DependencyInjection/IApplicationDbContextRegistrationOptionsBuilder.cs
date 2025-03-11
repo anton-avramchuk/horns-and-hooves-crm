@@ -1,0 +1,6 @@
+namespace HornsAndHoovesCrm.Modules.EntityFramework.DependencyInjection;
+
+public interface IApplicationDbContextRegistrationOptionsBuilder : IApplicationCommonDbContextRegistrationOptionsBuilder
+{
+
+}
