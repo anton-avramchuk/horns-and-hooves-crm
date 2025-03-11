@@ -1,6 +1,6 @@
 using Microsoft.Extensions.DependencyInjection;
 
-namespace HornsAndHoovesCrm.OpenApi.Extensions;
+namespace HornsAndHoovesCrm.Modules.OpenApi.Extensions;
 
 public static class ServiceCollectionExtensions
 {

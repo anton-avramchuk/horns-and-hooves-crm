@@ -2,9 +2,9 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HornsAndHoovesCrm.Host", "HornsAndHoovesCrm.Host\HornsAndHoovesCrm.Host.csproj", "{1456F903-6501-4107-9C0C-1C3291C4F80C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HornsAndHoovesCrm.OpenApi", "HornsAndHoovesCrm.OpenApi\HornsAndHoovesCrm.OpenApi.csproj", "{621063C7-5946-4585-B320-68C1AF9C23DA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HornsAndHoovesCrm.Modules.OpenApi", "HornsAndHoovesCrm.Modules.OpenApi\HornsAndHoovesCrm.Modules.OpenApi.csproj", "{621063C7-5946-4585-B320-68C1AF9C23DA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HornsAndHoovesCrm.Scalar", "HornsAndHoovesCrm.Scalar\HornsAndHoovesCrm.Scalar.csproj", "{79E571A5-973D-46B9-98BB-8D2B8A838CFB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HornsAndHoovesCrm.Modules.Scalar", "HornsAndHoovesCrm.Modules.Scalar\HornsAndHoovesCrm.Modules.Scalar.csproj", "{79E571A5-973D-46B9-98BB-8D2B8A838CFB}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HornsAndHoovesCrm.Authentication", "HornsAndHoovesCrm.Authentication\HornsAndHoovesCrm.Authentication.csproj", "{3685BDFB-E65E-4286-9595-C71206C6B3EB}"
 EndProject

@@ -1,5 +1,5 @@
-using HornsAndHoovesCrm.OpenApi.Extensions;
-using HornsAndHoovesCrm.Scalar.Extensions;
+using HornsAndHoovesCrm.Modules.OpenApi.Extensions;
+using HornsAndHoovesCrm.Modules.Scalar.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 

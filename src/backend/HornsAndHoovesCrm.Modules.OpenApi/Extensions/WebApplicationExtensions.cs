@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Builder;
 
-namespace HornsAndHoovesCrm.OpenApi.Extensions;
+namespace HornsAndHoovesCrm.Modules.OpenApi.Extensions;
 
 public static class WebApplicationExtensions
 {

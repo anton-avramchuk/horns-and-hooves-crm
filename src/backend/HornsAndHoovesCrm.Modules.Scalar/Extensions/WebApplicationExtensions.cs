@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Builder;
 using Scalar.AspNetCore;
 
-namespace HornsAndHoovesCrm.Scalar.Extensions;
+namespace HornsAndHoovesCrm.Modules.Scalar.Extensions;
 
 public static class WebApplicationExtensions
 {
