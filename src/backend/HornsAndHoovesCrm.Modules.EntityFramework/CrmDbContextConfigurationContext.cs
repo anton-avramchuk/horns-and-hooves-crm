@@ -14,7 +14,7 @@ public class CrmDbContextConfigurationContext : IServiceProviderAccessor
 
     public string ConnectionStringName { get; }
 
-    public DbConnection ExistingConnection { get; }
+    public DbConnection? ExistingConnection { get; }
 
     public DbContextOptionsBuilder DbContextOptions { get; protected set; }
 
@@ -22,7 +22,7 @@ public class CrmDbContextConfigurationContext : IServiceProviderAccessor
         string connectionString,
         IServiceProvider serviceProvider,
         string connectionStringName,
-        DbConnection existingConnection)
+        DbConnection? existingConnection)
     {
         ConnectionString = connectionString;
         ServiceProvider = serviceProvider;

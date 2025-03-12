@@ -4,3 +4,4 @@ public interface IConnectionStringChecker
 {
     Task<CrmConnectionStringCheckResult> CheckAsync(string connectionString);
 }
+

@@ -6,13 +6,13 @@ namespace HornsAndHoovesCrm.Modules.EntityFramework;
 public class DbContextCreationContext
 {
     public static DbContextCreationContext Current => _current.Value;
-    private static readonly AsyncLocal<DbContextCreationContext> _current = new AsyncLocal<DbContextCreationContext>();
+    private static readonly AsyncLocal<DbContextCreationContext> _current = new();
 
     public string ConnectionStringName { get; }
 
     public string ConnectionString { get; }
 
-    public DbConnection ExistingConnection { get; internal set; }
+    public DbConnection? ExistingConnection { get; internal set; }
 
     public DbContextCreationContext(string connectionStringName, string connectionString)
     {
