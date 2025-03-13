@@ -7,17 +7,12 @@
         <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
     </PropertyGroup>
 
-    <ItemGroup>
-      <Content Include="..\.dockerignore">
-        <Link>.dockerignore</Link>
-      </Content>
-    </ItemGroup>
-
     <PropertyGroup>
         <OpenApiDocumentsDirectory>./</OpenApiDocumentsDirectory>
     </PropertyGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\HornsAndHoovesCrm.AspNetCore.Jwt\HornsAndHoovesCrm.AspNetCore.Jwt.csproj" />
       <ProjectReference Include="..\HornsAndHoovesCrm.AspNetCore\HornsAndHoovesCrm.AspNetCore.csproj" />
       <ProjectReference Include="..\HornsAndHoovesCrm.Core\HornsAndHoovesCrm.Core.csproj" />
       <ProjectReference Include="..\HornsAndHoovesCrm.Modules.OpenApi\HornsAndHoovesCrm.Modules.OpenApi.csproj" />
