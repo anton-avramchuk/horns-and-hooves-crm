@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net9.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\HornsAndHoovesCrm.Core\HornsAndHoovesCrm.Core.csproj" />
+      <ProjectReference Include="..\HornsAndHoovesCrm.Modules.EntityFramework\HornsAndHoovesCrm.Modules.EntityFramework.csproj" />
+      <ProjectReference Include="..\HornsAndHoovesCrm.Modules.Identity.Domain.Shared\HornsAndHoovesCrm.Modules.Identity.Domain.Shared.csproj" />
+      <ProjectReference Include="..\HornsAndHoovesCrm.Modules.Identity.Domain\HornsAndHoovesCrm.Modules.Identity.Domain.csproj" />
+      <ProjectReference Include="..\HornsAndHoovesCrm.Security\HornsAndHoovesCrm.Security.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="9.0.2" />
+      <PackageReference Include="Microsoft.Extensions.Identity.Core" Version="9.0.2" />
+    </ItemGroup>
+
+</Project>
