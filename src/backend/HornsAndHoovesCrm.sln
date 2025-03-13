@@ -46,6 +46,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HornsAndHoovesCrm.ObjectMap
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HornsAndHoovesCrm.Domain", "HornsAndHoovesCrm.Domain\HornsAndHoovesCrm.Domain.csproj", "{2451E920-554C-4E34-9D8A-470807144313}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Identity", "Identity", "{1B49FC69-BF55-436E-AD4C-48F03C7B6242}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Modules", "Modules", "{CB91D70B-8339-4C48-BF05-E92014B99AD2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HornsAndHoovesCrm.Modules.Identity.Domain", "HornsAndHoovesCrm.Modules.Identity.Domain\HornsAndHoovesCrm.Modules.Identity.Domain.csproj", "{71E7DE59-83F2-402F-B441-37588CE5343A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -144,5 +150,13 @@ Global
 		{2451E920-554C-4E34-9D8A-470807144313}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2451E920-554C-4E34-9D8A-470807144313}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2451E920-554C-4E34-9D8A-470807144313}.Release|Any CPU.Build.0 = Release|Any CPU
+		{71E7DE59-83F2-402F-B441-37588CE5343A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{71E7DE59-83F2-402F-B441-37588CE5343A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{71E7DE59-83F2-402F-B441-37588CE5343A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{71E7DE59-83F2-402F-B441-37588CE5343A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{1B49FC69-BF55-436E-AD4C-48F03C7B6242} = {CB91D70B-8339-4C48-BF05-E92014B99AD2}
+		{71E7DE59-83F2-402F-B441-37588CE5343A} = {1B49FC69-BF55-436E-AD4C-48F03C7B6242}
 	EndGlobalSection
 EndGlobal
