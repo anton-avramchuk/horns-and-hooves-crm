@@ -40,6 +40,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HornsAndHoovesCrm.AspNetCor
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HornsAndHoovesCrm.Security", "HornsAndHoovesCrm.Security\HornsAndHoovesCrm.Security.csproj", "{6F0443D6-8746-45A7-B4FC-646811A6CCCC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HornsAndHoovesCrm.ObjectMapping", "HornsAndHoovesCrm.ObjectMapping\HornsAndHoovesCrm.ObjectMapping.csproj", "{21AD84C8-0DD7-4410-BB83-B3E2EB0530CC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HornsAndHoovesCrm.ObjectMapping.Mapster", "HornsAndHoovesCrm.ObjectMapping.Mapster\HornsAndHoovesCrm.ObjectMapping.Mapster.csproj", "{651EE39A-843F-439A-AF9C-F23E4841A451}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -126,5 +130,13 @@ Global
 		{6F0443D6-8746-45A7-B4FC-646811A6CCCC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6F0443D6-8746-45A7-B4FC-646811A6CCCC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6F0443D6-8746-45A7-B4FC-646811A6CCCC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{21AD84C8-0DD7-4410-BB83-B3E2EB0530CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21AD84C8-0DD7-4410-BB83-B3E2EB0530CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21AD84C8-0DD7-4410-BB83-B3E2EB0530CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21AD84C8-0DD7-4410-BB83-B3E2EB0530CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{651EE39A-843F-439A-AF9C-F23E4841A451}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{651EE39A-843F-439A-AF9C-F23E4841A451}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{651EE39A-843F-439A-AF9C-F23E4841A451}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{651EE39A-843F-439A-AF9C-F23E4841A451}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
