@@ -5,3 +5,4 @@ public interface ISimpleBatchStateChecker<TState> : ISimpleStateChecker<TState>
 {
     Task<SimpleStateCheckerResult<TState>> IsEnabledAsync(SimpleBatchStateCheckerContext<TState> context);
 }
+

@@ -7,9 +7,3 @@ public interface ISimpleStateCheckerManager<TState>
 
     Task<SimpleStateCheckerResult<TState>> IsEnabledAsync(TState[] states);
 }
-
-public interface IHasSimpleStateCheckers<TState>
-    where TState : IHasSimpleStateCheckers<TState>
-{
-    List<ISimpleStateChecker<TState>> StateCheckers { get; }
-}
