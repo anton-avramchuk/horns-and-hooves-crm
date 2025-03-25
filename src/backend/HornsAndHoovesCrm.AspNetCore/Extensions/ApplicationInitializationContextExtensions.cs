@@ -1,5 +1,6 @@
 using HornsAndHoovesCrm.Core;
 using HornsAndHoovesCrm.Core.DependencyInjection;
+using Microsoft.Extensions.Options;
 
 namespace HornsAndHoovesCrm.AspNetCore.Extensions;
 
@@ -35,5 +36,11 @@ public static class ApplicationInitializationContextExtensions
     public static ILoggerFactory GetLoggerFactory(this ApplicationInitializationContext context)
     {
         return context.ServiceProvider.GetRequiredService<ILoggerFactory>();
+    }
+    
+    public static TOptions GetOptions<TOptions>(this ApplicationInitializationContext context)
+        where TOptions : class
+    {
+        return context.ServiceProvider.GetRequiredService<IOptions<TOptions>>().Value;
     }
 }

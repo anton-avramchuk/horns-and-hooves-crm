@@ -52,6 +52,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HornsAndHoovesCrm.Authoriza
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HornsAndHoovesCrm.Authorization.Abstractions", "HornsAndHoovesCrm.Authorization.Abstractions\HornsAndHoovesCrm.Authorization.Abstractions.csproj", "{0D9FC49D-1DB0-400C-B412-2F7E8E8A9ACB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HornsAndHoovesCrm.Modules.Identity.AspNetCore.Jwt", "HornsAndHoovesCrm.Modules.Identity.AspNetCore.Jwt\HornsAndHoovesCrm.Modules.Identity.AspNetCore.Jwt.csproj", "{967B1C90-BD15-420B-BC05-6EF0DB5162B4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -154,6 +156,10 @@ Global
 		{0D9FC49D-1DB0-400C-B412-2F7E8E8A9ACB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0D9FC49D-1DB0-400C-B412-2F7E8E8A9ACB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0D9FC49D-1DB0-400C-B412-2F7E8E8A9ACB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{967B1C90-BD15-420B-BC05-6EF0DB5162B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{967B1C90-BD15-420B-BC05-6EF0DB5162B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{967B1C90-BD15-420B-BC05-6EF0DB5162B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{967B1C90-BD15-420B-BC05-6EF0DB5162B4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{1B49FC69-BF55-436E-AD4C-48F03C7B6242} = {CB91D70B-8339-4C48-BF05-E92014B99AD2}
@@ -161,5 +167,6 @@ Global
 		{55D2751E-4C7E-4B7A-9C3C-AADBE5D924AC} = {1B49FC69-BF55-436E-AD4C-48F03C7B6242}
 		{07AEBE03-1BA8-4FBB-AE03-DCAA78CB42B4} = {1B49FC69-BF55-436E-AD4C-48F03C7B6242}
 		{CDBA0E44-E95B-49CF-97EF-998B1F170C5E} = {1B49FC69-BF55-436E-AD4C-48F03C7B6242}
+		{967B1C90-BD15-420B-BC05-6EF0DB5162B4} = {1B49FC69-BF55-436E-AD4C-48F03C7B6242}
 	EndGlobalSection
 EndGlobal
