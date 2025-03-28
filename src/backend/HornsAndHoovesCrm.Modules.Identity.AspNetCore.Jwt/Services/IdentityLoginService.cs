@@ -3,7 +3,7 @@ using HornsAndHoovesCrm.AspNetCore.Jwt.Services;
 
 namespace HornsAndHoovesCrm.Modules.Identity.AspNetCore.Jwt.Services;
 
-public class IdentityLoginService : ILoginService<LoginModel>
+public class IdentityLoginService<TIdentityUser,TIdentityRole> : ILoginService<LoginModel>
 {
     public Task<LoginResult?> LoginAsync(LoginModel loginModel)
     {
