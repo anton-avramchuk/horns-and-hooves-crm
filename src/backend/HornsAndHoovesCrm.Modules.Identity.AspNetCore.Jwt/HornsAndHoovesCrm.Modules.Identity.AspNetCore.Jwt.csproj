@@ -13,9 +13,4 @@
       <ProjectReference Include="..\HornsAndHoovesCrm.Modules.Identity\HornsAndHoovesCrm.Modules.Identity.csproj" />
     </ItemGroup>
 
-    <ItemGroup>
-      <Folder Include="Options\" />
-      <Folder Include="Services\Abstractions\" />
-    </ItemGroup>
-
 </Project>

@@ -3,7 +3,7 @@ using HornsAndHoovesCrm.Domain;
 
 namespace HornsAndHoovesCrm.Modules.Identity.Domain;
 
-public class IdentityUser<TIdentityRole> : Entity<Guid> where TIdentityRole : IdentityRole
+public class CrmIdentityUser<TIdentityRole> : Entity<Guid> where TIdentityRole : CrmIdentityRole
 {
     public string UserName { get; protected internal set; }
 
@@ -24,13 +24,16 @@ public class IdentityUser<TIdentityRole> : Entity<Guid> where TIdentityRole : Id
     public bool LockoutEnabled { get; protected internal set; }
 
     public int AccessFailedCount { get; protected internal set; }
+    
+    
+    public virtual string DisplayUserName => UserName;
 
-    private readonly List<IdentityUserRole<TIdentityRole>> _roles = new List<IdentityUserRole<TIdentityRole>>();
-    public IReadOnlyCollection<IdentityUserRole<TIdentityRole>> Roles => _roles;
+    private readonly List<CrmIdentityUserRole<TIdentityRole>> _roles = new List<CrmIdentityUserRole<TIdentityRole>>();
+    public IReadOnlyCollection<CrmIdentityUserRole<TIdentityRole>> Roles => _roles;
 
-    private readonly List<IdentityUserClaim> _claims = new List<IdentityUserClaim>();
+    private readonly List<CrmIdentityUserClaim> _claims = new List<CrmIdentityUserClaim>();
 
-    public IReadOnlyCollection<IdentityUserClaim> Claims => _claims;
+    public IReadOnlyCollection<CrmIdentityUserClaim> Claims => _claims;
 
     public void ChangePasswordHash(string passwordHash)
     {
@@ -48,11 +51,11 @@ public class IdentityUser<TIdentityRole> : Entity<Guid> where TIdentityRole : Id
         SecurityStamp = value;
     }
 
-    protected IdentityUser()
+    protected CrmIdentityUser()
     {
     }
 
-    public IdentityUser(
+    public CrmIdentityUser(
         string userName,
         string email
     )
@@ -100,7 +103,7 @@ public class IdentityUser<TIdentityRole> : Entity<Guid> where TIdentityRole : Id
             return;
         }
 
-        _roles.Add(new IdentityUserRole<TIdentityRole>(Id, role));
+        _roles.Add(new CrmIdentityUserRole<TIdentityRole>(Id, role));
     }
 
     public virtual void RemoveRole(TIdentityRole role)
@@ -126,7 +129,7 @@ public class IdentityUser<TIdentityRole> : Entity<Guid> where TIdentityRole : Id
     public virtual void AddClaim(Claim claim)
     {
         if (claim == null) throw new ArgumentNullException(nameof(claim));
-        _claims.Add(new IdentityUserClaim(Id, claim));
+        _claims.Add(new CrmIdentityUserClaim(Id, claim));
     }
 
     public virtual void AddClaims(IEnumerable<Claim> claims)
@@ -138,7 +141,7 @@ public class IdentityUser<TIdentityRole> : Entity<Guid> where TIdentityRole : Id
         }
     }
 
-    public virtual IdentityUserClaim FindClaim(Claim claim)
+    public virtual CrmIdentityUserClaim FindClaim(Claim claim)
     {
         if (claim == null) throw new ArgumentNullException(nameof(claim));
         return Claims.FirstOrDefault(c => c.ClaimType == claim.Type && c.ClaimValue == claim.Value);

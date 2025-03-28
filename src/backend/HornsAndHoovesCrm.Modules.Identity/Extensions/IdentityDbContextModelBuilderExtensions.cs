@@ -7,8 +7,8 @@ namespace HornsAndHoovesCrm.Modules.Identity.Extensions;
 public static class IdentityDbContextModelBuilderExtensions
 {
     public static void ConfigureIdentity<TIdentityUser, TIdentityRole>(this ModelBuilder builder, string schema = "identity")
-        where TIdentityUser : IdentityUser<TIdentityRole>
-        where TIdentityRole : IdentityRole
+        where TIdentityUser : CrmIdentityUser<TIdentityRole>
+        where TIdentityRole : CrmIdentityRole
     {
         builder.HasDefaultSchema(schema);
         
@@ -59,7 +59,7 @@ public static class IdentityDbContextModelBuilderExtensions
 
         });
 
-        builder.Entity<IdentityUserClaim>(b =>
+        builder.Entity<CrmIdentityUserClaim>(b =>
         {
             b.ToTable("UserClaims");
 
@@ -75,7 +75,7 @@ public static class IdentityDbContextModelBuilderExtensions
             //b.ApplyObjectExtensionMappings();
         });
 
-        builder.Entity<IdentityUserRole<TIdentityRole>>(b =>
+        builder.Entity<CrmIdentityUserRole<TIdentityRole>>(b =>
         {
             b.ToTable("UserRoles");
 
@@ -112,7 +112,7 @@ public static class IdentityDbContextModelBuilderExtensions
             claimsNavigation.SetPropertyAccessMode(PropertyAccessMode.Field);
         });
 
-        builder.Entity<IdentityRoleClaim>(b =>
+        builder.Entity<CrmIdentityRoleClaim>(b =>
         {
             b.ToTable("RoleClaims");
 

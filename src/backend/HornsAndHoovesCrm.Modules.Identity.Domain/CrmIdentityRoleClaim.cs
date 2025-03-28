@@ -2,19 +2,19 @@ using System.Security.Claims;
 
 namespace HornsAndHoovesCrm.Modules.Identity.Domain;
 
-public class IdentityRoleClaim : IdentityClaim
+public class CrmIdentityRoleClaim : CrmIdentityClaim
 {
     public Guid RoleId { get; protected set; }
 
 
-    protected IdentityRoleClaim()
+    protected CrmIdentityRoleClaim()
     {
 
     }
 
 
 
-    protected internal IdentityRoleClaim(
+    protected internal CrmIdentityRoleClaim(
         Guid roleId,
         Claim claim)
         : base(claim)
@@ -22,7 +22,7 @@ public class IdentityRoleClaim : IdentityClaim
         RoleId = roleId;
     }
 
-    public IdentityRoleClaim(
+    public CrmIdentityRoleClaim(
         Guid roleId,
         string claimType,
         string claimValue

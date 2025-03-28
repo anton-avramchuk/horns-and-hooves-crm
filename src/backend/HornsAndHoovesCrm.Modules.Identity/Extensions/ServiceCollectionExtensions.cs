@@ -10,7 +10,7 @@ namespace HornsAndHoovesCrm.Modules.Identity.Extensions;
 public static class ServiceCollectionExtensions
 {
     public static IdentityBuilder AddIdentityContext<TContext, TIdentityUser, TIdentityRole>(this IServiceCollection services, Action<IdentityOptions> setupAction)
-        where TContext : IdentityDbContext<TContext, TIdentityUser, TIdentityRole> where TIdentityRole : IdentityRole where TIdentityUser : IdentityUser<TIdentityRole>
+        where TContext : IdentityDbContext<TContext, TIdentityUser, TIdentityRole> where TIdentityRole : CrmIdentityRole where TIdentityUser : CrmIdentityUser<TIdentityRole>
     {
         services.AddApplicationDbContext<TContext>();
 

@@ -9,8 +9,8 @@ public static class ServiceCollectionExtensions
 {
     public static IServiceCollection AddIdentityJwtAuth<TIdentityDbContext,TIdentityUser,TIdentityRole>(this IServiceCollection services)
     where TIdentityDbContext: IdentityDbContext<TIdentityDbContext, TIdentityUser, TIdentityRole>
-    where TIdentityUser : IdentityUser<TIdentityRole>
-    where TIdentityRole : IdentityRole
+    where TIdentityUser : CrmIdentityUser<TIdentityRole>
+    where TIdentityRole : CrmIdentityRole
     {
         services.AddScoped<ILoginService<LoginModel>, IdentityLoginService<TIdentityUser,TIdentityRole>>();
         //services.AddIdentity<>()

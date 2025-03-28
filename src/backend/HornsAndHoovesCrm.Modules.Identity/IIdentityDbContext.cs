@@ -10,7 +10,7 @@ public interface IIdentityDbContext : ICrmDbContext
 }
 
 public abstract class IdentityDbContext<TDbContext, TIdentityUser, TIdentityRole> : CrmDbContext<TDbContext>, IIdentityDbContext
-    where TIdentityUser : IdentityUser<TIdentityRole> where TIdentityRole : IdentityRole where TDbContext : DbContext
+    where TIdentityUser : CrmIdentityUser<TIdentityRole> where TIdentityRole : CrmIdentityRole where TDbContext : DbContext
 {
     protected IdentityDbContext(DbContextOptions<TDbContext> options) : base(options)
     {

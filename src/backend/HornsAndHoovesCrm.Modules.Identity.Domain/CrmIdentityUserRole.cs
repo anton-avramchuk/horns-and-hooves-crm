@@ -2,7 +2,7 @@ using HornsAndHoovesCrm.Domain;
 
 namespace HornsAndHoovesCrm.Modules.Identity.Domain;
 
-public class IdentityUserRole<TIdentityRole> : Entity where TIdentityRole : IdentityRole
+public class CrmIdentityUserRole<TIdentityRole> : Entity where TIdentityRole : CrmIdentityRole
 {
     /// <summary>
     /// Gets or sets the primary key of the user that is linked to a role.
@@ -17,7 +17,7 @@ public class IdentityUserRole<TIdentityRole> : Entity where TIdentityRole : Iden
 
     public TIdentityRole Role { get;private set; }
 
-    private IdentityUserRole()
+    private CrmIdentityUserRole()
     {
 
     }
@@ -28,7 +28,7 @@ public class IdentityUserRole<TIdentityRole> : Entity where TIdentityRole : Iden
         RoleId = role.Id;
     }
 
-    public IdentityUserRole(Guid userId, TIdentityRole role)
+    public CrmIdentityUserRole(Guid userId, TIdentityRole role)
     {
         UserId = userId;
         SetRole(role);

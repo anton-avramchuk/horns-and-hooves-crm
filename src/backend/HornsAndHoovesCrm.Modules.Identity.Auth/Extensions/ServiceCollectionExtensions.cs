@@ -9,8 +9,8 @@ namespace HornsAndHoovesCrm.Modules.Identity.Auth.Extensions;
 public static class ServiceCollectionExtensions
 {
     public static IServiceCollection AddIdentity<TIdentityContext, TSignInManager, TUser, TRole>(this IServiceCollection services, Action<IdentityOptions> setupAction)
-        where TUser : Domain.IdentityUser<TRole>
-        where TRole : Domain.IdentityRole
+        where TUser : Domain.CrmIdentityUser<TRole>
+        where TRole : Domain.CrmIdentityRole
         where TIdentityContext : IdentityDbContext<TIdentityContext, TUser, TRole>
         where TSignInManager : IdentitySignInManager<TUser, TRole>
     {
@@ -28,8 +28,8 @@ public static class ServiceCollectionExtensions
     }
 
     public static IServiceCollection AddIdentity<TIdentityContext, TUser, TRole>(this IServiceCollection services, Action<IdentityOptions> setupAction)
-        where TUser : Domain.IdentityUser<TRole>
-        where TRole : Domain.IdentityRole
+        where TUser : Domain.CrmIdentityUser<TRole>
+        where TRole : Domain.CrmIdentityRole
         where TIdentityContext : IdentityDbContext<TIdentityContext, TUser, TRole>
     {
 

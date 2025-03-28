@@ -7,8 +7,8 @@ using Microsoft.Extensions.Options;
 namespace HornsAndHoovesCrm.Modules.Identity.Services;
 
 public class ApplicationUserClaimsPrincipalFactory<TIdentityUser, TIdentityRole> : UserClaimsPrincipalFactory<TIdentityUser, TIdentityRole>, ITransientDependency
-    where TIdentityRole : IdentityRole
-    where TIdentityUser : IdentityUser<TIdentityRole>
+    where TIdentityRole : CrmIdentityRole
+    where TIdentityUser : CrmIdentityUser<TIdentityRole>
 {
     public ICurrentPrincipalAccessor CurrentPrincipalAccessor { get; }
 

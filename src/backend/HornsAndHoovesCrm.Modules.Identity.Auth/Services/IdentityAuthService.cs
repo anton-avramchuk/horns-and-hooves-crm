@@ -3,8 +3,8 @@ using HornsAndHoovesCrm.Modules.Identity.Auth.Services.Abstracctions;
 namespace HornsAndHoovesCrm.Modules.Identity.Auth.Services;
 
 public class IdentityAuthService<TIdentityUser, TIdentityRole> : IAuthService
-    where TIdentityUser : Domain.IdentityUser<TIdentityRole>
-    where TIdentityRole : Domain.IdentityRole
+    where TIdentityUser : Domain.CrmIdentityUser<TIdentityRole>
+    where TIdentityRole : Domain.CrmIdentityRole
 {
     private readonly IdentitySignInManager<TIdentityUser, TIdentityRole> _signInManager;
     

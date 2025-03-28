@@ -3,23 +3,23 @@ using HornsAndHoovesCrm.Domain;
 
 namespace HornsAndHoovesCrm.Modules.Identity.Domain;
 
-public class IdentityRole : Entity<Guid>, IAggregateRoot
+public class CrmIdentityRole : Entity<Guid>, IAggregateRoot
 {
     public virtual string Name { get; protected internal set; }
 
     public virtual string NormalizedName { get; protected internal set; }
 
 
-    private readonly List<IdentityRoleClaim> _claims = new List<IdentityRoleClaim>();
+    private readonly List<CrmIdentityRoleClaim> _claims = new List<CrmIdentityRoleClaim>();
 
-    public virtual IReadOnlyCollection<IdentityRoleClaim> Claims => _claims;
+    public virtual IReadOnlyCollection<CrmIdentityRoleClaim> Claims => _claims;
 
-    protected IdentityRole()
+    protected CrmIdentityRole()
     {
 
     }
 
-    protected IdentityRole(Guid id) : base(id)
+    protected CrmIdentityRole(Guid id) : base(id)
     {
 
     }
@@ -39,13 +39,13 @@ public class IdentityRole : Entity<Guid>, IAggregateRoot
     }
 
 
-    public IdentityRole(string name) : base(Guid.NewGuid())
+    public CrmIdentityRole(string name) : base(Guid.NewGuid())
     {
         ChangeName(name);
     }
 
 
-    public IdentityRole(Guid id, string name) : base(id)
+    public CrmIdentityRole(Guid id, string name) : base(id)
     {
         ChangeName(name);
     }
@@ -55,7 +55,7 @@ public class IdentityRole : Entity<Guid>, IAggregateRoot
 
     public virtual void AddClaim(Claim claim)
     {
-        _claims.Add(new IdentityRoleClaim(Id, claim));
+        _claims.Add(new CrmIdentityRoleClaim(Id, claim));
     }
 
     public virtual void RemoveClaim(Claim claim)

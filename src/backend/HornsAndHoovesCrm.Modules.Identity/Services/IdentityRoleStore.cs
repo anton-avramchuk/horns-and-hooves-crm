@@ -9,7 +9,7 @@ using Microsoft.Extensions.Logging;
 namespace HornsAndHoovesCrm.Modules.Identity.Services;
 
 public class IdentityRoleStore<TIdentityRole, TIdentityDbContext> : IRoleStore<TIdentityRole>, IRoleClaimStore<TIdentityRole>, ITransientDependency, IQueryableRoleStore<TIdentityRole>
-    where TIdentityRole : IdentityRole
+    where TIdentityRole : CrmIdentityRole
     where TIdentityDbContext : IIdentityDbContext
 {
     private readonly TIdentityDbContext _context;

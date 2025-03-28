@@ -3,7 +3,7 @@ using HornsAndHoovesCrm.Domain;
 
 namespace HornsAndHoovesCrm.Modules.Identity.Domain;
 
-public abstract class IdentityClaim : Entity<Guid>
+public abstract class CrmIdentityClaim : Entity<Guid>
 {
     /// <summary>
     /// Gets or sets the claim type for this claim.
@@ -15,17 +15,17 @@ public abstract class IdentityClaim : Entity<Guid>
     /// </summary>
     public string ClaimValue { get; protected set; }
 
-    protected IdentityClaim()
+    protected CrmIdentityClaim()
     {
 
     }
 
-    protected IdentityClaim(Claim claim) : this(claim.Type, claim.Value)
+    protected CrmIdentityClaim(Claim claim) : this(claim.Type, claim.Value)
     {
 
     }
 
-    protected IdentityClaim(string claimType, string claimValue)
+    protected CrmIdentityClaim(string claimType, string claimValue)
     {
         Id = Guid.NewGuid();
         ClaimType = claimType ?? throw new ArgumentNullException(nameof(claimType));

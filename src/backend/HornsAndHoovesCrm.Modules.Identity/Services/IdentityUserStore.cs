@@ -16,7 +16,7 @@ public class IdentityUserStore<TIdentityUser, TIdentityRole, TIdentityContext> :
     IUserPasswordStore<TIdentityUser>,
     IUserSecurityStampStore<TIdentityUser>,
     IQueryableUserStore<TIdentityUser>,
-    ITransientDependency where TIdentityUser : IdentityUser<TIdentityRole> where TIdentityContext : IIdentityDbContext where TIdentityRole : IdentityRole
+    ITransientDependency where TIdentityUser : CrmIdentityUser<TIdentityRole> where TIdentityContext : IIdentityDbContext where TIdentityRole : CrmIdentityRole
 {
     private readonly ILookupNormalizer _lookupNormalizer;
     private readonly IRoleStore<TIdentityRole> _roleStore;
@@ -247,7 +247,7 @@ public class IdentityUserStore<TIdentityUser, TIdentityRole, TIdentityContext> :
         if (user == null) throw new ArgumentNullException(nameof(user));
         cancellationToken.ThrowIfCancellationRequested();
 
-        return await (from userRole in _context.Set<IdentityUserRole<TIdentityRole>>()
+        return await (from userRole in _context.Set<CrmIdentityUserRole<TIdentityRole>>()
             join role in _context.Set<TIdentityRole>() on userRole.RoleId equals role.Id
             where userRole.UserId == user.Id
             select role.Name).ToListAsync(cancellationToken);
