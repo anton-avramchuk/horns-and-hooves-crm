@@ -1,1 +1,2 @@
-export * from './lib/crm@browser.module';
+export * from './lib/browser.module';
+export * from './lib/services/index';
