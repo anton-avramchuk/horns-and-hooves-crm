@@ -15,7 +15,9 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@crm/core": ["libs/core/core/src/index.ts"]
+      "@crm/auth": ["libs/core/auth/src/index.ts"],
+      "@crm/core": ["libs/core/core/src/index.ts"],
+      "@crm/permissions": ["libs/core/permissions/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
