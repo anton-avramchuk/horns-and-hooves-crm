@@ -1,7 +1,7 @@
 {
-  "name": "crm@permissions",
+  "name": "core",
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "libs/core/permissions/src",
+  "sourceRoot": "libs/core/core/src",
   "prefix": "lib",
   "projectType": "library",
   "tags": [],
@@ -10,7 +10,7 @@
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "jestConfig": "libs/core/permissions/jest.config.ts"
+        "jestConfig": "libs/core/core/jest.config.ts"
       }
     },
     "lint": {

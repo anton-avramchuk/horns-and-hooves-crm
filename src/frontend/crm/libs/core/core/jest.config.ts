@@ -1,8 +1,8 @@
 export default {
-  displayName: 'crm@permissions',
+  displayName: 'core',
   preset: '../../../jest.preset.js',
   setupFilesAfterEnv: ['<rootDir>/src/test-setup.ts'],
-  coverageDirectory: '../../../coverage/libs/core/permissions',
+  coverageDirectory: '../../../coverage/libs/core/core',
   transform: {
     '^.+\\.(ts|mjs|js|html)$': [
       'jest-preset-angular',
