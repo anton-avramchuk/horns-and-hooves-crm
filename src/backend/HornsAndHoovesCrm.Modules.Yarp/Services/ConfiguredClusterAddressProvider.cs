@@ -14,14 +14,31 @@ public class ConfiguredClusterAddressProvider : IClusterAddressProvider
         _configKey = configKey;
     }
 
-    public IEnumerable<string> GetClusterAddresses()
+    public IEnumerable<(string Address, string RoutePrefix)> GetClusterAddresses()
     {
-        return _configuration.GetSection($"{_configKey}:Clusters")
-            .GetChildren()
-            .Select(cluster => cluster.GetSection("Destinations")
-                .GetChildren()
-                .First()
-                .GetValue<string>("Address"))
-            .Where(x => x != null)!;
+        var routesSection = _configuration.GetSection($"{_configKey}:Routes");
+        var clustersSection = _configuration.GetSection($"{_configKey}:Clusters");
+
+        foreach (var route in routesSection.GetChildren())
+        {
+            var clusterId = route.GetValue<string>("ClusterId");
+            var path = route.GetSection("Match").GetValue<string>("Path");
+            var cluster = clustersSection.GetSection(clusterId);
+            // Проверяем, существует ли секция Destinations и содержит ли она дочерние элементы
+            var destinations = cluster.GetSection("Destinations").GetChildren();
+            var firstDestination = destinations.FirstOrDefault();
+
+            if (firstDestination == null || string.IsNullOrEmpty(path))
+            {
+                continue;
+            }
+
+            var address = firstDestination.GetValue<string>("Address");
+            if (!string.IsNullOrEmpty(address))
+            {
+                var routePrefix = path.Substring(0, path.IndexOf("/{**catch-all}", StringComparison.Ordinal));
+                yield return (address, routePrefix);
+            }
+        }
     }
 }

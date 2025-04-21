@@ -23,13 +23,12 @@ public static class ServiceCollectionsExtensions
     }
 
 
-    public static IServiceCollection AddYarpFromConfig(this IServiceCollection services,
+    public static IServiceCollection AddYarpFromMemory(this IServiceCollection services,
         IReadOnlyList<RouteConfig> routes,
         IReadOnlyList<ClusterConfig> clusters)
     {
-        
-        services.AddSingleton<IClusterAddressProvider>(w=>new InMemoryClusterAddressProvider(clusters));
-        
+        services.AddSingleton<IClusterAddressProvider>(w => new InMemoryClusterAddressProvider(routes, clusters));
+
         services.AddReverseProxy().LoadFromMemory(routes, clusters);
 
 

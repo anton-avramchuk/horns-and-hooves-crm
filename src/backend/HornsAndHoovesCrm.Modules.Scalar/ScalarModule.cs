@@ -7,7 +7,7 @@ using Scalar.AspNetCore;
 namespace HornsAndHoovesCrm.Modules.Scalar;
 
 [DependsOn(typeof(AspNetCoreModule))]
-public class ScalarModule:CrmModule
+public class ScalarModule : CrmModule
 {
     public override void OnApplicationInitialization(ApplicationInitializationContext context)
     {
@@ -17,7 +17,17 @@ public class ScalarModule:CrmModule
             context.Response.Redirect("/scalar", permanent: false);
             return Task.CompletedTask;
         });
-        
-        routeBuilder.MapScalarApiReference();
+
+
+        var options = context.GetOptions<ScalarModuleOptions>();
+
+
+        routeBuilder.MapScalarApiReference(w =>
+        {
+            if (!string.IsNullOrWhiteSpace(options.OpenApiPath))
+            {
+                w.OpenApiRoutePattern = options.OpenApiPath;
+            }
+        });
     }
 }

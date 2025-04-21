@@ -19,7 +19,5 @@ public class YarpModule : CrmModule
     {
         var routeBuilder = context.GetRouteBuilder();
         routeBuilder.MapReverseProxy();
-
-        var appBuilder = context.GetApplicationBuilder();
     }
 }

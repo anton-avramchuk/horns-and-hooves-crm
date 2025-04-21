@@ -4,7 +4,7 @@ using Microsoft.OpenApi.Readers;
 
 namespace HornsAndHoovesCrm.Modules.OpenApi.Services;
 
-public class OpenApiAggregator : IOpenApiAggregator, ISingletonDependency
+public class OpenApiAggregator : IOpenApiAggregator
 {
     private readonly IHttpClientFactory _clientFactory;
     private readonly IClusterAddressProvider _addressProvider;
@@ -26,17 +26,19 @@ public class OpenApiAggregator : IOpenApiAggregator, ISingletonDependency
             Paths = new OpenApiPaths()
         };
 
-        foreach (var address in clusterAddresses)
+        foreach (var (address, routePrefix) in clusterAddresses)
         {
             try
             {
+                
                 var fullUri = new Uri(new Uri(address), "openapi/v1.json");
                 var json = await _clientFactory.CreateClient().GetStringAsync(fullUri);
                 var doc = reader.Read(json, out var diagnostic);
 
                 foreach (var path in doc.Paths)
                 {
-                    combined.Paths[path.Key] = path.Value;
+                    var newPathKey = $"{routePrefix.TrimEnd('/')}{path.Key}";
+                    combined.Paths[newPathKey] = path.Value;
                 }
             }
             catch (Exception ex)
