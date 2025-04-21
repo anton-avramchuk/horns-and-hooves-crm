@@ -1,0 +1,29 @@
+name: .NET
+
+on:
+  push:
+    branches: [ "dev" ]
+  pull_request:
+    branches: [ "dev" ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: 9.0.x
+
+    - name: Restore dependencies
+      run: dotnet restore src/backend
+
+    - name: Build
+      run: dotnet build src/backend --no-restore
+
+    - name: Test
+      run: dotnet test src/backend --no-build --verbosity normal
