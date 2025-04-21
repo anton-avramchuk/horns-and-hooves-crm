@@ -54,6 +54,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HornsAndHoovesCrm.Modules.I
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HornsAndHoovesCrm.Modules.Identity.Auth", "HornsAndHoovesCrm.Modules.Identity.Auth\HornsAndHoovesCrm.Modules.Identity.Auth.csproj", "{EAC362A2-FDC9-4E13-A902-57FD5FDF64E8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HornsAndHoovesCrm.Modules.Yarp", "HornsAndHoovesCrm.Modules.Yarp\HornsAndHoovesCrm.Modules.Yarp.csproj", "{ACF45DD1-FAFB-40C0-A0C4-D44376DE418B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -160,6 +162,10 @@ Global
 		{EAC362A2-FDC9-4E13-A902-57FD5FDF64E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EAC362A2-FDC9-4E13-A902-57FD5FDF64E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EAC362A2-FDC9-4E13-A902-57FD5FDF64E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ACF45DD1-FAFB-40C0-A0C4-D44376DE418B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ACF45DD1-FAFB-40C0-A0C4-D44376DE418B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ACF45DD1-FAFB-40C0-A0C4-D44376DE418B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ACF45DD1-FAFB-40C0-A0C4-D44376DE418B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{1B49FC69-BF55-436E-AD4C-48F03C7B6242} = {CB91D70B-8339-4C48-BF05-E92014B99AD2}
