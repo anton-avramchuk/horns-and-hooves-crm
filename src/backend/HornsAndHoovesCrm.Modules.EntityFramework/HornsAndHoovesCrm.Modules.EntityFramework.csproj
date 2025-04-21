@@ -15,7 +15,7 @@
     <ItemGroup>
       <ProjectReference Include="..\HornsAndHoovesCrm.Core.DataAccess\HornsAndHoovesCrm.Core.DataAccess.csproj" />
       <ProjectReference Include="..\HornsAndHoovesCrm.Core\HornsAndHoovesCrm.Core.csproj" />
-      <ProjectReference Include="..\HornsAndHoovesCrm.Modules.Domain\HornsAndHoovesCrm.Modules.Domain.csproj" />
+      <ProjectReference Include="..\HornsAndHoovesCrm.Domain\HornsAndHoovesCrm.Domain.csproj" />
     </ItemGroup>
 
 </Project>

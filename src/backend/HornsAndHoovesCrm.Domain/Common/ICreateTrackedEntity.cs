@@ -1,4 +1,4 @@
-namespace HornsAndHoovesCrm.Modules.Domain.Common;
+namespace HornsAndHoovesCrm.Domain.Common;
 
 public interface ICreateTrackedEntity
 {

@@ -6,8 +6,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HornsAndHoovesCrm.Modules.O
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HornsAndHoovesCrm.Modules.Scalar", "HornsAndHoovesCrm.Modules.Scalar\HornsAndHoovesCrm.Modules.Scalar.csproj", "{79E571A5-973D-46B9-98BB-8D2B8A838CFB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HornsAndHoovesCrm.Modules.Domain", "HornsAndHoovesCrm.Modules.Domain\HornsAndHoovesCrm.Modules.Domain.csproj", "{1228F8EF-AF32-47A2-9E31-01AF6AB5889F}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HornsAndHoovesCrm.Modules.Specification", "HornsAndHoovesCrm.Modules.Specification\HornsAndHoovesCrm.Modules.Specification.csproj", "{AA81BD1A-CD43-4FAC-92B9-BCA1E876F0B7}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HornsAndHoovesCrm.Modules.EntityFramework", "HornsAndHoovesCrm.Modules.EntityFramework\HornsAndHoovesCrm.Modules.EntityFramework.csproj", "{10E0A815-E2BC-40F4-9066-70466F419203}"
@@ -74,10 +72,6 @@ Global
 		{79E571A5-973D-46B9-98BB-8D2B8A838CFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{79E571A5-973D-46B9-98BB-8D2B8A838CFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{79E571A5-973D-46B9-98BB-8D2B8A838CFB}.Release|Any CPU.Build.0 = Release|Any CPU
-		{1228F8EF-AF32-47A2-9E31-01AF6AB5889F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1228F8EF-AF32-47A2-9E31-01AF6AB5889F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1228F8EF-AF32-47A2-9E31-01AF6AB5889F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1228F8EF-AF32-47A2-9E31-01AF6AB5889F}.Release|Any CPU.Build.0 = Release|Any CPU
 		{AA81BD1A-CD43-4FAC-92B9-BCA1E876F0B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{AA81BD1A-CD43-4FAC-92B9-BCA1E876F0B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AA81BD1A-CD43-4FAC-92B9-BCA1E876F0B7}.Release|Any CPU.ActiveCfg = Release|Any CPU

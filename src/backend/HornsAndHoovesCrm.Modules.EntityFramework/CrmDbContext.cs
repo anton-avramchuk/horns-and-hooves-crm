@@ -1,4 +1,4 @@
-﻿using HornsAndHoovesCrm.Modules.Domain.Common;
+﻿using HornsAndHoovesCrm.Domain.Common;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
 using Microsoft.EntityFrameworkCore.Storage;
