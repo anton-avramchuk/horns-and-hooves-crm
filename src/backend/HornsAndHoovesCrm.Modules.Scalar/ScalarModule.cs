@@ -12,9 +12,9 @@ public class ScalarModule : CrmModule
     public override void OnApplicationInitialization(ApplicationInitializationContext context)
     {
         var routeBuilder = context.GetRouteBuilder();
-        routeBuilder.MapGet("/", context =>
+        routeBuilder.MapGet("/", httpContext =>
         {
-            context.Response.Redirect("/scalar", permanent: false);
+            httpContext.Response.Redirect("/scalar", permanent: false);
             return Task.CompletedTask;
         });
 
