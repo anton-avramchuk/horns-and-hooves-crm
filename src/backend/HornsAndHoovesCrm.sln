@@ -64,19 +64,19 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HornsAndHoovesCrm.Modules.Y
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ReferenceData", "ReferenceData", "{73A250EA-246B-424A-AEA2-2E0EB3C2D18B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HornsAndHoovesCrm.ReferenceData.Admin.Api", "HornsAndHoovesCrm.ReferenceData.Admin.Api\HornsAndHoovesCrm.ReferenceData.Admin.Api.csproj", "{BCF3B4F2-25FA-43E7-A68B-005723F8F9DD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HornsAndHoovesCrm.Modules.ReferenceData.Admin.Api", "HornsAndHoovesCrm.Modules.ReferenceData.Admin.Api\HornsAndHoovesCrm.Modules.ReferenceData.Admin.Api.csproj", "{BCF3B4F2-25FA-43E7-A68B-005723F8F9DD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HornsAndHoovesCrm.ReferenceData.Domain", "HornsAndHoovesCrm.ReferenceData.Domain\HornsAndHoovesCrm.ReferenceData.Domain.csproj", "{11330935-E407-4797-90C8-814FDDEAAF93}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HornsAndHoovesCrm.Modules.ReferenceData.Domain", "HornsAndHoovesCrm.Modules.ReferenceData.Domain\HornsAndHoovesCrm.Modules.ReferenceData.Domain.csproj", "{11330935-E407-4797-90C8-814FDDEAAF93}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HornsAndHoovesCrm.ReferenceData.DataAccess", "HornsAndHoovesCrm.ReferenceData.DataAccess\HornsAndHoovesCrm.ReferenceData.DataAccess.csproj", "{ACC5F046-1DF6-44E5-9AB7-CE734A6E27F1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HornsAndHoovesCrm.Modules.ReferenceData.DataAccess", "HornsAndHoovesCrm.Modules.ReferenceData.DataAccess\HornsAndHoovesCrm.Modules.ReferenceData.DataAccess.csproj", "{ACC5F046-1DF6-44E5-9AB7-CE734A6E27F1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HornsAndHoovesCrm.ReferenceData.Api", "HornsAndHoovesCrm.ReferenceData.Api\HornsAndHoovesCrm.ReferenceData.Api.csproj", "{48083E1B-E816-482E-9FCC-33609CF392D1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HornsAndHoovesCrm.Modules.ReferenceData.Api", "HornsAndHoovesCrm.Modules.ReferenceData.Api\HornsAndHoovesCrm.Modules.ReferenceData.Api.csproj", "{48083E1B-E816-482E-9FCC-33609CF392D1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HornsAndHoovesCrm.ReferenceData.Admin.Contracts", "HornsAndHoovesCrm.ReferenceData.Admin.Contracts\HornsAndHoovesCrm.ReferenceData.Admin.Contracts.csproj", "{222B416E-5005-4C62-BF00-72E5ABC5AB38}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HornsAndHoovesCrm.Modules.ReferenceData.Admin.Contracts", "HornsAndHoovesCrm.Modules.ReferenceData.Admin.Contracts\HornsAndHoovesCrm.Modules.ReferenceData.Admin.Contracts.csproj", "{222B416E-5005-4C62-BF00-72E5ABC5AB38}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HornsAndHoovesCrm.ReferenceData.Contracts", "HornsAndHoovesCrm.ReferenceData.Contracts\HornsAndHoovesCrm.ReferenceData.Contracts.csproj", "{6D474BC6-0830-4103-B685-61E44C65AB24}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HornsAndHoovesCrm.Modules.ReferenceData.Contracts", "HornsAndHoovesCrm.Modules.ReferenceData.Contracts\HornsAndHoovesCrm.Modules.ReferenceData.Contracts.csproj", "{6D474BC6-0830-4103-B685-61E44C65AB24}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HornsAndHoovesCrm.ReferenceData.Domain.Shared", "HornsAndHoovesCrm.ReferenceData.Domain.Shared\HornsAndHoovesCrm.ReferenceData.Domain.Shared.csproj", "{5A4FECF9-2E0D-46EA-A003-33A5AB8B45B3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HornsAndHoovesCrm.Modules.ReferenceData.Domain.Shared", "HornsAndHoovesCrm.Modules.ReferenceData.Domain.Shared\HornsAndHoovesCrm.Modules.ReferenceData.Domain.Shared.csproj", "{5A4FECF9-2E0D-46EA-A003-33A5AB8B45B3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

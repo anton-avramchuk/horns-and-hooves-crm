@@ -1,8 +1,8 @@
 ﻿using HornsAndHoovesCrm.Core.Modularity;
-using HornsAndHoovesCrm.ReferenceData.Admin.Contracts;
-using HornsAndHoovesCrm.ReferenceData.DataAccess;
+using HornsAndHoovesCrm.Modules.ReferenceData.Admin.Contracts;
+using HornsAndHoovesCrm.Modules.ReferenceData.DataAccess;
 
-namespace HornsAndHoovesCrm.ReferenceData.Admin.Api;
+namespace HornsAndHoovesCrm.Modules.ReferenceData.Admin.Api;
 
 [DependsOn(typeof(CrmReferenceDataAdminContractsModule), typeof(CrmReferenceDataDataAccessModule))]
 public class CrmReferenceDataAdminApiModule : CrmModule

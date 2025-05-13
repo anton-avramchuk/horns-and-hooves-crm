@@ -8,8 +8,8 @@
 
     <ItemGroup>
       <ProjectReference Include="..\HornsAndHoovesCrm.Core\HornsAndHoovesCrm.Core.csproj" />
-      <ProjectReference Include="..\HornsAndHoovesCrm.ReferenceData.Admin.Contracts\HornsAndHoovesCrm.ReferenceData.Admin.Contracts.csproj" />
-      <ProjectReference Include="..\HornsAndHoovesCrm.ReferenceData.DataAccess\HornsAndHoovesCrm.ReferenceData.DataAccess.csproj" />
+      <ProjectReference Include="..\HornsAndHoovesCrm.Modules.ReferenceData.Contracts\HornsAndHoovesCrm.Modules.ReferenceData.Contracts.csproj" />
+      <ProjectReference Include="..\HornsAndHoovesCrm.Modules.ReferenceData.DataAccess\HornsAndHoovesCrm.Modules.ReferenceData.DataAccess.csproj" />
     </ItemGroup>
 
 </Project>
