@@ -6,4 +6,9 @@
         <Nullable>enable</Nullable>
     </PropertyGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\HornsAndHoovesCrm.Core\HornsAndHoovesCrm.Core.csproj" />
+      <ProjectReference Include="..\HornsAndHoovesCrm.Domain\HornsAndHoovesCrm.Domain.csproj" />
+    </ItemGroup>
+
 </Project>
