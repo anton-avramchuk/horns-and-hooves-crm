@@ -1,3 +1,4 @@
 {
-    "nxConsole.nxWorkspacePath": "crm"
+    "nxConsole.nxWorkspacePath": "crm",
+    "nxConsole.generateAiAgentRules": true
 }
