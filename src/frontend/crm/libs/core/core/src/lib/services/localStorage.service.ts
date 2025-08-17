@@ -1,5 +1,5 @@
 import { Inject, Injectable } from '@angular/core';
-import { LOCAL_STORAGE } from './storage-tokens';
+import { LOCAL_STORAGE } from '../core.module';
 
 @Injectable({ providedIn: 'root' })
 export class LocalStorageService {

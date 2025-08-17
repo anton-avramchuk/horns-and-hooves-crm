@@ -1,6 +1,6 @@
 import { TestBed } from '@angular/core/testing';
-import { SESSION_STORAGE } from './storage-tokens';
 import { SessionStorageService } from './sessionStorage.service';
+import { SESSION_STORAGE } from '../core.module';
 
 
 

@@ -18,6 +18,7 @@
       "@crm/auth": ["libs/core/auth/src/index.ts"],
       "@crm/core": ["libs/core/core/src/index.ts"],
       "@crm/permissions": ["libs/core/permissions/src/index.ts"],
+      "@crm/test": ["libs/test/src/index.ts"],
       "@crm/ui/core": ["libs/ui/core/src/index.ts"],
       "@crm/ui/layout/core": ["libs/ui/layout/src/index.ts"]
     }

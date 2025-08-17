@@ -1,5 +1,5 @@
 import { Inject, Injectable } from '@angular/core';
-import { SESSION_STORAGE } from './storage-tokens';
+import { SESSION_STORAGE } from '../core.module';
 
 @Injectable({ providedIn: 'root' })
 export class SessionStorageService {
