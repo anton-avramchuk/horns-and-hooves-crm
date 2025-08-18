@@ -15,7 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "horns-and-hooves@core": ["libs/core/core/src/index.ts"]
+      "@horns-and-hooves/core/auth": ["libs/core/auth/src/index.ts"],
+      "@horns-and-hooves/core": ["libs/core/core/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
