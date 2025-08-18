@@ -1,5 +1,5 @@
 import { Inject, Injectable } from '@angular/core';
-import { APP_STORAGE_KEY, LOCAL_STORAGE } from '../horns-and-hooves.module';
+import { APP_STORAGE_KEY, LOCAL_STORAGE } from '../horns-and-hooves-core.module';
 @Injectable({ providedIn: 'root' })
 export class LocalStorageService {
     private storageKey: string;
