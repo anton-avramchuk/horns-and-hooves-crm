@@ -4,6 +4,10 @@ import {
   NgModule,
   Provider,
 } from '@angular/core';
+import {
+  IWigetConfiguration,
+  HornsAndHoovesCoreLayoutModule,
+} from '@horns-and-hooves/ui-controls-core';
 import { HornsAndHoovesLayoutService } from './services';
 
 export const LAYOUT_APP_PROVIDER = new InjectionToken<ILayoutAppConfig>(

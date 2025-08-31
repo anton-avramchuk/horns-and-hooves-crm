@@ -5,5 +5,8 @@
     "@angular/core": "^20.1.0",
     "rxjs": "~7.8.0"
   },
-  "sideEffects": false
+  "sideEffects": false,
+  "dependencies": {
+    "@horns-and-hooves/ui-controls-core": "0.0.1"
+  }
 }
