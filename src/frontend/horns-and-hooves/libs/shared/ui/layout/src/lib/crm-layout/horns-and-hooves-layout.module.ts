@@ -15,7 +15,7 @@ export const LAYOUT_APP_PROVIDER = new InjectionToken<ILayoutAppConfig>(
 );
 
 export interface IHornsAndHoovesLayoutModuleConfig {
-  appConfig?: ILayoutAppConfig;
+  layoutConfig?: ILayoutAppConfig;
 }
 
 export interface ILayoutAppConfig {
@@ -41,8 +41,8 @@ export class HornsAndHoovesLayoutModule {
   static forRoot(
     config: IHornsAndHoovesLayoutModuleConfig
   ): ModuleWithProviders<HornsAndHoovesLayoutModule> {
-    if (!config.appConfig) {
-      config.appConfig = {
+    if (!config.layoutConfig) {
+      config.layoutConfig = {
         inputStyle: 'outlined',
         colorScheme: 'light',
         theme: 'lara-light-indigo',
@@ -54,7 +54,7 @@ export class HornsAndHoovesLayoutModule {
 
     const providers: Provider[] = [
       { provide: HornsAndHoovesLayoutService },
-      { provide: LAYOUT_APP_PROVIDER, useValue: config.appConfig },
+      { provide: LAYOUT_APP_PROVIDER, useValue: config.layoutConfig },
     ];
 
     return {
