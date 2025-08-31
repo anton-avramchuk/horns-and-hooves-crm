@@ -1,79 +1,86 @@
 import { TestBed, ComponentFixture } from '@angular/core/testing';
 import { CrmClaimsHasPermissionDirective } from './claimsPermission.directive';
 import { Component, ViewChild } from '@angular/core';
-import { AUTH_SERVICE, CLAIMS_PERMISSION_SERVICE } from '../crm-core-auth.module';
+import {
+  AUTH_SERVICE,
+  CLAIMS_PERMISSION_SERVICE,
+} from '../crm-core-auth.module';
 
 @Component({
-    template: `
-    <div *crmHasClaimsPermission="requiredPermissions">Content</div>
-  `
+  imports: [CrmClaimsHasPermissionDirective],
+  template: `
+    <div *hornsAndHoovesAuthHasClaimsPermission="requiredPermissions">
+      Content
+    </div>
+  `,
 })
 class TestComponent {
-    @ViewChild(CrmClaimsHasPermissionDirective, { static: true }) directive!: CrmClaimsHasPermissionDirective;
-    requiredPermissions: string[] = [];
+  @ViewChild(CrmClaimsHasPermissionDirective, { static: true })
+  directive!: CrmClaimsHasPermissionDirective;
+  requiredPermissions: string[] = [];
 }
 
 describe('CrmClaimsHasPermissionDirective', () => {
-    let authServiceMock: any;
-    let claimsServiceMock: any;
-    let fixture: ComponentFixture<TestComponent>;
-    let testComponent: TestComponent;
+  let authServiceMock: any;
+  let claimsServiceMock: any;
+  let fixture: ComponentFixture<TestComponent>;
+  let testComponent: TestComponent;
 
-    beforeEach(() => {
-        authServiceMock = {
-            isAuthenticated: jest.fn()
-        };
+  beforeEach(() => {
+    authServiceMock = {
+      isAuthenticated: jest.fn(),
+    };
 
-        claimsServiceMock = {
-            hasClaims: jest.fn()
-        };
+    claimsServiceMock = {
+      hasClaims: jest.fn(),
+    };
 
-        TestBed.configureTestingModule({
-            declarations: [CrmClaimsHasPermissionDirective, TestComponent],
-            providers: [
-                { provide: AUTH_SERVICE, useValue: authServiceMock },
-                { provide: CLAIMS_PERMISSION_SERVICE, useValue: claimsServiceMock }
-            ]
-        });
-
-        fixture = TestBed.createComponent(TestComponent);
-        testComponent = fixture.componentInstance;
+    TestBed.configureTestingModule({
+      imports: [TestComponent],
+      providers: [
+        { provide: AUTH_SERVICE, useValue: authServiceMock },
+        { provide: CLAIMS_PERMISSION_SERVICE, useValue: claimsServiceMock },
+      ],
     });
 
-    it('should create an instance', () => {
-        expect(testComponent).toBeTruthy();
-    });
+    fixture = TestBed.createComponent(TestComponent);
+    testComponent = fixture.componentInstance;
+  });
 
-    it('should render content if user has necessary claims', () => {
-        authServiceMock.isAuthenticated.mockReturnValue(true);
-        claimsServiceMock.hasClaims.mockReturnValue(true);
-        testComponent.requiredPermissions = ['permission1'];
+  it('should create an instance', () => {
+    expect(testComponent).toBeTruthy();
+  });
 
-        fixture.detectChanges();
+  it('should render content if user has necessary claims', () => {
+    authServiceMock.isAuthenticated.mockReturnValue(true);
+    claimsServiceMock.hasClaims.mockReturnValue(true);
+    testComponent.requiredPermissions = ['permission1'];
 
-        const element: HTMLElement = fixture.nativeElement.querySelector('div');
-        expect(element.innerHTML.trim()).toBe('Content');
-    });
+    fixture.detectChanges();
 
-    it('should not render content if user does not have necessary claims', () => {
-        authServiceMock.isAuthenticated.mockReturnValue(true);
-        claimsServiceMock.hasClaims.mockReturnValue(false);
-        testComponent.requiredPermissions = ['permission1'];
+    const element: HTMLElement = fixture.nativeElement.querySelector('div');
+    expect(element.innerHTML.trim()).toBe('Content');
+  });
 
-        fixture.detectChanges();
+  it('should not render content if user does not have necessary claims', () => {
+    authServiceMock.isAuthenticated.mockReturnValue(true);
+    claimsServiceMock.hasClaims.mockReturnValue(false);
+    testComponent.requiredPermissions = ['permission1'];
 
-        const element: HTMLElement = fixture.nativeElement.querySelector('div');
-        expect(element).toBeFalsy();
-    });
+    fixture.detectChanges();
 
-    it('should not render content if user is not authenticated', () => {
-        authServiceMock.isAuthenticated.mockReturnValue(false);
-        claimsServiceMock.hasClaims.mockReturnValue(true);
-        testComponent.requiredPermissions = ['permission1'];
+    const element: HTMLElement = fixture.nativeElement.querySelector('div');
+    expect(element).toBeFalsy();
+  });
 
-        fixture.detectChanges();
+  it('should not render content if user is not authenticated', () => {
+    authServiceMock.isAuthenticated.mockReturnValue(false);
+    claimsServiceMock.hasClaims.mockReturnValue(true);
+    testComponent.requiredPermissions = ['permission1'];
 
-        const element: HTMLElement = fixture.nativeElement.querySelector('div');
-        expect(element).toBeFalsy();
-    });
+    fixture.detectChanges();
+
+    const element: HTMLElement = fixture.nativeElement.querySelector('div');
+    expect(element).toBeFalsy();
+  });
 });

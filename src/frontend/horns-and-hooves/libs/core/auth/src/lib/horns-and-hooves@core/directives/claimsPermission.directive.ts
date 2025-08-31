@@ -1,7 +1,6 @@
 import {
   Directive,
   inject,
-  Inject,
   Input,
   TemplateRef,
   ViewContainerRef,

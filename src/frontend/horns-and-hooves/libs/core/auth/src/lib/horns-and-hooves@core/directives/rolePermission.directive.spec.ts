@@ -4,8 +4,9 @@ import { Component, ViewChild } from '@angular/core';
 import { AUTH_SERVICE, ROLE_PERMISSION_SERVICE } from '../crm-core-auth.module';
 
 @Component({
+    imports: [CrmRoleHasPermissionDirective],
     template: `
-    <div *crmHasRolePermission="requiredPermissions">Content</div>
+    <div *hornsAndHoovesAuthHasRolePermission="requiredPermissions">Content</div>
   `
 })
 class TestComponent {
@@ -29,7 +30,7 @@ describe('CrmRoleHasPermissionDirective', () => {
         };
 
         TestBed.configureTestingModule({
-            declarations: [CrmRoleHasPermissionDirective, TestComponent], // Объявляем директиву в тестовом модуле
+            imports: [TestComponent], // Объявляем директиву в тестовом модуле
             providers: [
                 { provide: AUTH_SERVICE, useValue: authServiceMock },
                 { provide: ROLE_PERMISSION_SERVICE, useValue: roleServiceMock }
