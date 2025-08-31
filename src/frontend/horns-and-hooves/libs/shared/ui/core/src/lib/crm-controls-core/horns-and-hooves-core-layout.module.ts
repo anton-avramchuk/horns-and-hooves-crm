@@ -10,7 +10,7 @@ import {
 import { IMenuProvider } from './menu';
 import {
   HornsAndHoovesCoreModule,
-  throwIfAlreadyLoaded,
+  throwIfAlreadyLoaded
 } from '@horns-and-hooves/core';
 export const MENU_PROVIDER = new InjectionToken<IMenuProvider>(
   'crmMenuProvider'
