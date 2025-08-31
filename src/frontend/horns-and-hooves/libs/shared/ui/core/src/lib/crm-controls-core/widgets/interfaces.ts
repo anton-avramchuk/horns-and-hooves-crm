@@ -8,4 +8,5 @@ export interface IWigetConfiguration {
   tooltip?: string; // подсказка при наведении
   cssClass?: string; // кастомный CSS-класс
   featureFlag?: string; // ключ для включения через feature toggle
+  claims?: string[]; // права, которым виджет доступен
 }

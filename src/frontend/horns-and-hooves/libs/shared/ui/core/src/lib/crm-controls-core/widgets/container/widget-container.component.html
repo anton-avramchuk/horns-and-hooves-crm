@@ -1,1 +1,5 @@
-<p>widget-container.component works!</p>
+@for (widget of visibleWidgets; track widget) {
+<div [ngClass]="widget.cssClass" [title]="widget.tooltip">
+  <ng-container *ngComponentOutlet="widget.component"></ng-container>
+</div>
+}
