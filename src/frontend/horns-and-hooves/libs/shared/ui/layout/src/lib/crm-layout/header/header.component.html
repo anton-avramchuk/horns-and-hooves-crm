@@ -1,1 +1,12 @@
-<p>header.component works!</p>
+<div class="layout-topbar">
+  <a class="layout-topbar-logo" routerLink="['/']" routerLinkActive="active">
+    <span>{{ applicationName }}</span>
+  </a>
+  <div class="layout-topbar-menu">
+    <!-- <ui-user-profile *ngIf="isAuthenticated"></ui-user-profile> -->
+
+    @for (widget of widgets; track widget) {
+      <ng-container *ngComponentOutlet="widget.component"></ng-container>
+    }
+  </div>
+</div>

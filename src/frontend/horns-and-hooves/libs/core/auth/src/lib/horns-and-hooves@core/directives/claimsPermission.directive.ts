@@ -13,7 +13,7 @@ import {
 import { IAuthService, IClaimsPermissionService } from '../services';
 
 @Directive({
-  selector: '[crmHasClaimsPermission]',
+  selector: '[hornsAndHoovesAuthHasClaimsPermission]',
 })
 export class CrmClaimsHasPermissionDirective {
   private authService: IAuthService = inject(AUTH_SERVICE);
@@ -25,7 +25,7 @@ export class CrmClaimsHasPermissionDirective {
   private viewContainer: ViewContainerRef = inject(ViewContainerRef);
 
 
-  @Input() set crmHasClaimsPermission(requiredPermissions: string[]) {
+  @Input() set hornsAndHoovesAuthHasClaimsPermission(requiredPermissions: string[]) {
     const hasPermission = this.checkPermission(requiredPermissions);
 
     if (hasPermission) {

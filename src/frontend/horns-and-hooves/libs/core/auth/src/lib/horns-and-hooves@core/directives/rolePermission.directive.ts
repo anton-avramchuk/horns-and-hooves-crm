@@ -9,7 +9,7 @@ import { AUTH_SERVICE, ROLE_PERMISSION_SERVICE } from '../crm-core-auth.module';
 import { IAuthService, IRolePermissionService } from '../services';
 
 @Directive({
-  selector: '[crmHasRolePermission]',
+  selector: '[hornsAndHoovesAuthHasRolePermission]',
 })
 export class CrmRoleHasPermissionDirective {
   private authService: IAuthService = inject(AUTH_SERVICE);
@@ -18,7 +18,9 @@ export class CrmRoleHasPermissionDirective {
   private templateRef: TemplateRef<any> = inject(TemplateRef);
   private viewContainer: ViewContainerRef = inject(ViewContainerRef);
 
-  @Input() set crmHasRolePermission(requiredPermissions: string[]) {
+  @Input() set hornsAndHoovesAuthHasRolePermission(
+    requiredPermissions: string[]
+  ) {
     const hasPermission = this.checkPermission(requiredPermissions);
 
     if (hasPermission) {
@@ -29,7 +31,6 @@ export class CrmRoleHasPermissionDirective {
   }
 
   private checkPermission(requiredPermissions: string[]): boolean {
-    // Получаем права пользователя из AuthService
     return (
       this.authService.isAuthenticated() &&
       this.roleService.hasRoles(requiredPermissions)

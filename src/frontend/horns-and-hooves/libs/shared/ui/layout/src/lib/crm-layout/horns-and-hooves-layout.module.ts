@@ -10,12 +10,18 @@ import {
 } from '@horns-and-hooves/ui-controls-core';
 import { HornsAndHoovesLayoutService } from './services';
 
+export const HeaderWidgetInjectionToken = new InjectionToken<IWigetConfiguration[]>(
+  'hornsAndHoovesLayoutHeaderWidgets',
+  { factory: () => [] }
+);
+
 export const LAYOUT_APP_PROVIDER = new InjectionToken<ILayoutAppConfig>(
   'hornsAndHoovesLayoutConfig'
 );
 
 export interface IHornsAndHoovesLayoutModuleConfig {
   layoutConfig?: ILayoutAppConfig;
+  headerConfig?: IHeaderConfig;
 }
 
 export interface ILayoutAppConfig {
@@ -28,7 +34,7 @@ export interface ILayoutAppConfig {
 }
 
 export interface IHeaderConfig {
-  topBarConfig?: IWigetConfiguration[];
+  topBarConfig: IWigetConfiguration[];
 }
 
 @NgModule({
@@ -52,10 +58,25 @@ export class HornsAndHoovesLayoutModule {
       };
     }
 
+    const headerConfig: IHeaderConfig = config.headerConfig ?? {
+      topBarConfig: [],
+    };
+
+    const headerWidgets: IWigetConfiguration[] =
+      headerConfig.topBarConfig ?? [];
+
     const providers: Provider[] = [
       { provide: HornsAndHoovesLayoutService },
       { provide: LAYOUT_APP_PROVIDER, useValue: config.layoutConfig },
     ];
+
+    headerWidgets.forEach((widget) => {
+      providers.push({
+        provide: HeaderWidgetInjectionToken,
+        useValue: widget,
+        multi: true,
+      });
+    });
 
     return {
       ngModule: HornsAndHoovesLayoutModule,
