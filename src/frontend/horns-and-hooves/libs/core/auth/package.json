@@ -9,6 +9,6 @@
   },
   "sideEffects": false,
   "dependencies": {
-    "@horns-and-hooves/core": "0.0.1",
+    "@horns-and-hooves/core": "0.0.1"
   }
 }

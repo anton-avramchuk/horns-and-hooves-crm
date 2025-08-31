@@ -1,6 +1,6 @@
 import { inject, Injectable } from '@angular/core';
 import { IMenuItem, IMenuProvider } from './interfaces';
-import { MENU_PROVIDER } from '../crm-core-layout.module';
+import { MENU_PROVIDER } from '../horns-and-hooves-core-layout.module';
 
 @Injectable({
   providedIn: 'root',

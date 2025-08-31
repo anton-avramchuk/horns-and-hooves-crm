@@ -1,6 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 import { MenuService } from './menu.service';
-import { MENU_PROVIDER } from '../crm-core-layout.module';
+import { MENU_PROVIDER } from '../horns-and-hooves-core-layout.module';
 import { IMenuItem, IMenuProvider } from './interfaces';
 
 describe('MenuService', () => {

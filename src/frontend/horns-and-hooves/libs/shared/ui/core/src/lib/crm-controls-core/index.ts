@@ -1,2 +1,2 @@
 export * from './menu/index';
-export * from './crm-core-layout.module';
+export * from './horns-and-hooves-core-layout.module';

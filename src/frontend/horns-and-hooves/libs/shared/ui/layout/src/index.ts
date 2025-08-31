@@ -1,1 +1,1 @@
-export * from './lib/crm-layout/crm-layout';
+export * from './lib/crm-layout/horns-and-hooves-layout.module';

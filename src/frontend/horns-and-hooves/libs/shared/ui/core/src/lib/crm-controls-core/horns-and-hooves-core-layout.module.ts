@@ -26,14 +26,14 @@ export interface ILayoutModuleConfig {
   exports: [],
   providers: [],
 })
-export class CrmCoreLayoutModule {
-  constructor(@Optional() @SkipSelf() parentModule: CrmCoreLayoutModule) {
+export class HornsAndHoovesCoreLayoutModule {
+  constructor(@Optional() @SkipSelf() parentModule: HornsAndHoovesCoreLayoutModule) {
     throwIfAlreadyLoaded(parentModule, 'HornsAndHoovesCoreModule');
   }
 
   static forRoot(
     config: ILayoutModuleConfig
-  ): ModuleWithProviders<CrmCoreLayoutModule> {
+  ): ModuleWithProviders<HornsAndHoovesCoreLayoutModule> {
     const providers: Provider[] = config.menuProviders.map((provider) => ({
       provide: MENU_PROVIDER,
       useClass: provider,
@@ -41,7 +41,7 @@ export class CrmCoreLayoutModule {
     }));
 
     return {
-      ngModule: CrmCoreLayoutModule,
+      ngModule: HornsAndHoovesCoreLayoutModule,
       providers: [providers],
     };
   }
