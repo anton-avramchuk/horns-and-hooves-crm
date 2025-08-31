@@ -11,7 +11,7 @@ import {
 import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'lib-widget-container.component',
+  selector: 'horns-and-hooves-widget-container',
   imports: [CommonModule],
   templateUrl: './widget-container.component.html',
   styleUrl: './widget-container.component.scss',

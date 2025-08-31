@@ -5,8 +5,8 @@
   <div class="layout-topbar-menu">
     <!-- <ui-user-profile *ngIf="isAuthenticated"></ui-user-profile> -->
 
-    @for (widget of widgets; track widget) {
-      <ng-container *ngComponentOutlet="widget.component"></ng-container>
-    }
+    <horns-and-hooves-widget-container
+      [widgets]="widgets"
+    ></horns-and-hooves-widget-container>
   </div>
 </div>
