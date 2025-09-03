@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'crm-layout-footer',
+  selector: 'horns-and-hooves-footer',
   imports: [],
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.scss',

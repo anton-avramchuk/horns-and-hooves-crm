@@ -8,7 +8,7 @@ import { HeaderWidgetInjectionToken } from '../horns-and-hooves-layout.module';
 import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'crm-layout-header.component',
+  selector: 'horns-and-hooves-header',
   imports: [CommonModule, WidgetContainerComponent],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss',

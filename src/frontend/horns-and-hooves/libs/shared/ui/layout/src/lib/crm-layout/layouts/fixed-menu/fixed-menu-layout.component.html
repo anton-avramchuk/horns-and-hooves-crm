@@ -1,0 +1,12 @@
+<div class="layout-wrapper" [ngClass]="containerClass">
+  <horns-and-hooves-header></horns-and-hooves-header>
+  <div class="layout-sidebar">
+    <horns-and-hooves-sidebar></horns-and-hooves-sidebar>
+  </div>
+  <div class="layout-main-container">
+    <div class="layout-main">
+      <router-outlet></router-outlet>
+    </div>
+    <horns-and-hooves-footer></horns-and-hooves-footer>
+  </div>
+</div>
