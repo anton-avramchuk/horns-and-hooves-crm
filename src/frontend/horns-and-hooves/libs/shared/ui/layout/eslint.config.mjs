@@ -34,7 +34,7 @@ export default [
         'error',
         {
           type: 'element',
-          prefix: 'crm-layout',
+          prefix: 'horns-and-hooves',
           style: 'kebab-case',
         },
       ],

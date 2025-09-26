@@ -78,6 +78,16 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HornsAndHoovesCrm.Modules.R
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HornsAndHoovesCrm.Modules.ReferenceData.Domain.Shared", "HornsAndHoovesCrm.Modules.ReferenceData.Domain.Shared\HornsAndHoovesCrm.Modules.ReferenceData.Domain.Shared.csproj", "{5A4FECF9-2E0D-46EA-A003-33A5AB8B45B3}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Generators", "Generators", "{7F90DEF3-AB91-4840-95FC-9737E238CFB3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HornsAndHoovesCrm.Generators.Module", "HornsAndHoovesCrm.Generators.Module\HornsAndHoovesCrm.Generators.Module.csproj", "{9A2AE484-579C-4389-99E7-5A9750ED74C6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HornsAndHoovesCrm.Generators.Core", "HornsAndHoovesCrm.Generators.Core\HornsAndHoovesCrm.Generators.Core.csproj", "{BBC19C62-EEA8-4C4D-9D42-5D01EA62C475}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HornsAndHoovesCrm.Generators.Application", "HornsAndHoovesCrm.Generators.Application\HornsAndHoovesCrm.Generators.Application.csproj", "{BC75897B-6906-41F5-92AA-CDBDB0BA6219}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HornsAndHoovesCrm.Generators.AspNetCore.Api", "HornsAndHoovesCrm.Generators.AspNetCore.Api\HornsAndHoovesCrm.Generators.AspNetCore.Api.csproj", "{05718A03-CCBA-4B64-91CE-46BB0DE5E156}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -224,6 +234,22 @@ Global
 		{5A4FECF9-2E0D-46EA-A003-33A5AB8B45B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5A4FECF9-2E0D-46EA-A003-33A5AB8B45B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5A4FECF9-2E0D-46EA-A003-33A5AB8B45B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9A2AE484-579C-4389-99E7-5A9750ED74C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A2AE484-579C-4389-99E7-5A9750ED74C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A2AE484-579C-4389-99E7-5A9750ED74C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A2AE484-579C-4389-99E7-5A9750ED74C6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BBC19C62-EEA8-4C4D-9D42-5D01EA62C475}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BBC19C62-EEA8-4C4D-9D42-5D01EA62C475}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BBC19C62-EEA8-4C4D-9D42-5D01EA62C475}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BBC19C62-EEA8-4C4D-9D42-5D01EA62C475}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC75897B-6906-41F5-92AA-CDBDB0BA6219}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC75897B-6906-41F5-92AA-CDBDB0BA6219}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC75897B-6906-41F5-92AA-CDBDB0BA6219}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC75897B-6906-41F5-92AA-CDBDB0BA6219}.Release|Any CPU.Build.0 = Release|Any CPU
+		{05718A03-CCBA-4B64-91CE-46BB0DE5E156}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05718A03-CCBA-4B64-91CE-46BB0DE5E156}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05718A03-CCBA-4B64-91CE-46BB0DE5E156}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05718A03-CCBA-4B64-91CE-46BB0DE5E156}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{1B49FC69-BF55-436E-AD4C-48F03C7B6242} = {CB91D70B-8339-4C48-BF05-E92014B99AD2}
@@ -243,5 +269,9 @@ Global
 		{222B416E-5005-4C62-BF00-72E5ABC5AB38} = {73A250EA-246B-424A-AEA2-2E0EB3C2D18B}
 		{6D474BC6-0830-4103-B685-61E44C65AB24} = {73A250EA-246B-424A-AEA2-2E0EB3C2D18B}
 		{5A4FECF9-2E0D-46EA-A003-33A5AB8B45B3} = {73A250EA-246B-424A-AEA2-2E0EB3C2D18B}
+		{9A2AE484-579C-4389-99E7-5A9750ED74C6} = {7F90DEF3-AB91-4840-95FC-9737E238CFB3}
+		{BBC19C62-EEA8-4C4D-9D42-5D01EA62C475} = {7F90DEF3-AB91-4840-95FC-9737E238CFB3}
+		{BC75897B-6906-41F5-92AA-CDBDB0BA6219} = {7F90DEF3-AB91-4840-95FC-9737E238CFB3}
+		{05718A03-CCBA-4B64-91CE-46BB0DE5E156} = {7F90DEF3-AB91-4840-95FC-9737E238CFB3}
 	EndGlobalSection
 EndGlobal
